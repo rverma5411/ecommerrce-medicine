@@ -1,0 +1,128 @@
+/* Header Component Styles */
+.header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.logoIcon {
+  font-size: 2rem;
+}
+
+.logoText {
+  color: var(--dark-color);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  color: var(--dark-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.navLink:hover {
+  background: var(--light-color);
+  color: var(--primary-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.logoutBtn, .authLink {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.logoutBtn {
+  background: var(--danger-color);
+  color: white;
+  border: none;
+}
+
+.logoutBtn:hover {
+  background: #c82333;
+}
+
+.authLink {
+  background: var(--light-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.authLink:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.cartLink {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--danger-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
